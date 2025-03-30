@@ -31,15 +31,15 @@
             label1 = new Label();
             btnGuess = new Button();
             txtGuess = new TextBox();
-            button1 = new Button();
+            butAnswer = new Button();
             richTextBoxAnswer = new RichTextBox();
-            label2 = new Label();
+            labelShowResult = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(27, 32);
+            label1.Location = new Point(151, 29);
             label1.Name = "label1";
             label1.Size = new Size(224, 15);
             label1.TabIndex = 0;
@@ -47,12 +47,13 @@
             // 
             // btnGuess
             // 
-            btnGuess.Location = new Point(27, 72);
+            btnGuess.Location = new Point(27, 76);
             btnGuess.Name = "btnGuess";
             btnGuess.Size = new Size(88, 23);
             btnGuess.TabIndex = 1;
             btnGuess.Text = "Guess";
             btnGuess.UseVisualStyleBackColor = true;
+            btnGuess.Click += btnGuess_Click;
             // 
             // txtGuess
             // 
@@ -61,42 +62,42 @@
             txtGuess.Size = new Size(100, 23);
             txtGuess.TabIndex = 2;
             // 
-            // button1
+            // butAnswer
             // 
-            button1.AccessibleRole = AccessibleRole.None;
-            button1.Location = new Point(27, 105);
-            button1.Name = "button1";
-            button1.Size = new Size(88, 63);
-            button1.TabIndex = 3;
-            button1.Text = "Please Show Answer";
-            button1.UseVisualStyleBackColor = true;
+            butAnswer.AccessibleRole = AccessibleRole.None;
+            butAnswer.Location = new Point(27, 105);
+            butAnswer.Name = "butAnswer";
+            butAnswer.Size = new Size(88, 63);
+            butAnswer.TabIndex = 3;
+            butAnswer.Text = "Please Show Answer";
+            butAnswer.UseVisualStyleBackColor = true;
+            butAnswer.Click += butAnswer_Click;
             // 
             // richTextBoxAnswer
             // 
             richTextBoxAnswer.Location = new Point(151, 106);
             richTextBoxAnswer.Name = "richTextBoxAnswer";
             richTextBoxAnswer.ReadOnly = true;
-            richTextBoxAnswer.Size = new Size(275, 62);
+            richTextBoxAnswer.Size = new Size(350, 62);
             richTextBoxAnswer.TabIndex = 4;
             richTextBoxAnswer.Text = "";
             // 
-            // label2
+            // labelShowResult
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(257, 76);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 5;
-            label2.Text = "label2";
+            labelShowResult.AutoSize = true;
+            labelShowResult.Location = new Point(257, 76);
+            labelShowResult.Name = "labelShowResult";
+            labelShowResult.Size = new Size(0, 15);
+            labelShowResult.TabIndex = 5;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(438, 194);
-            Controls.Add(label2);
+            ClientSize = new Size(513, 194);
+            Controls.Add(labelShowResult);
             Controls.Add(richTextBoxAnswer);
-            Controls.Add(button1);
+            Controls.Add(butAnswer);
             Controls.Add(txtGuess);
             Controls.Add(btnGuess);
             Controls.Add(label1);
@@ -113,8 +114,8 @@
         private Label label1;
         private Button btnGuess;
         private TextBox txtGuess;
-        private Button button1;
+        private Button butAnswer;
         private RichTextBox richTextBoxAnswer;
-        private Label label2;
+        private Label labelShowResult;
     }
 }
