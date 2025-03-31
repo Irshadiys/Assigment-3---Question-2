@@ -27,7 +27,6 @@ namespace Assigment_3___Question_2
                         labelShowResult.Text = "Either you know the secret or you got lucky!";
                     else
                         labelShowResult.Text = "You know the secret!";
-
                     btnGuess.Enabled = false;
                 }
                 else if (attempts == 10)
@@ -43,20 +42,22 @@ namespace Assigment_3___Question_2
                 {
                     labelShowResult.Text = "Too High, Try Again";
                 }
+
+                allValues += guess + "   ";
+                richTextBoxAnswer.Text = allValues;
             }
             else
             {
                 labelShowResult.Text = "Enter a valid number";
             }
 
-            allValues = txtGuess.Text;
-            richTextBoxAnswer.Text = allValues;
             txtGuess.Clear();
         }
 
+
         private void butAnswer_Click(object sender, EventArgs e)
         {
-            labelShowResult.Text = secret.ToString();
+            MessageBox.Show("The secret number is: " + secret.ToString());
         }
     }
 }
